@@ -1,9 +1,12 @@
 import { FormEvent, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
-import illustrationImg from '../assets/images/illustration.svg'
+//import illustrationImg from '../assets/images/illustration.svg'
 import logoImg from '../assets/images/logo.svg';
-import googleIconImg from '../assets/images/google-icon.svg'
+//import googleIconImg from '../assets/images/google-icon.svg'
+
+import vocaloidLogoImg from '../assets/images/Vocaloid_logo.svg'
+import rinImg from '../assets/images/Rin.jpeg'
 
 import { Button } from '../components/Button';
 import { database } from '../services/firebase'
@@ -36,13 +39,14 @@ async function handleCreateRoom(event: FormEvent){
     return (
         <div id = "page-auth">
             <aside>
-                <img src= {illustrationImg} alt = "Ilustração simbolizando perguntas e respostas" />
+                <img src= {rinImg} alt = "Ilustração simbolizando perguntas e respostas" />
                 <strong>Crie salas de Q&amp;A ao-vivo</strong>
                 <p> Tire as dúvidas da sua audiência em tempo-real</p>
             </aside>
             <main>
                 <div className = "main-content">
                     <img src = {logoImg} alt = "Letmeask" />
+                    <img src= {vocaloidLogoImg} alt="Logo vocaloid" className = "vocaloid"/>
                     <h2>Criar uma nova sala</h2>
                     <form onSubmit = {handleCreateRoom}>
                         <input
